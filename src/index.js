@@ -14,7 +14,7 @@ module.exports = function toReadable (number) {
         result = tens[Math.floor(number/10)] + (number%10 ? " " + num0to19[number%10]:"");
     }
     else if(number >= 100){
-        result = num0to19[Math.floor(number/100)] + " " + "hundred" + ( number%100 === 0 ? '' : " "+ toReadable(number%100));
+        result = num0to19[Math.floor(number/100)] + " hundred" + ( number%100 === 0 ? '' : " "+ toReadable(number%100));
     }
 return result;
 }
