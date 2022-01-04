@@ -13,7 +13,7 @@ module.exports = function toReadable (number) {
         result = num0to19[number];      
     }
     else if(number >= 20 && number < 100){
-        result = tens[Math.floor(number/10)] + (number%10 ? " " + units[number%10]:"");
+        result = tens[Math.floor(number/10)] + (number%10 ? " " + num0to19[number%10]:"");
     }
     else if(number >= 100){
         result = num0to19[Math.floor(number/100)] + " " + "hundred" + ( number%100 === 0 ? '' : " "+ toReadable(number%100));
